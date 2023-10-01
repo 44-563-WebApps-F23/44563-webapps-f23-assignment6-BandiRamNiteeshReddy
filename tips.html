@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tips</title>
+    </head>
+ 
+<body>
+
+<h1>Ram Niteesh Reddy Bandi shows tip amounts</h1>
+
+<form>
+    <label for="base">Enter base amount </label>
+    <input type ="number" id="base"  value=50> <br>
+
+    <label for="tip">Enter the tip percent </label>
+    <input type ="number" id="tip"  value=15> <br>
+
+    <button  type="button" onclick="tips()" value="Show tip">show tip</button>
+</form>
+
+
+<div id="result"></div>
+
+<script> 
+let myOutput="";
+function tips() {
+    
+    
+    var base = document.getElementById("base").value;
+    var tip = parseInt(document.getElementById("tip").value);
+    var toshow="Tips are: ";
+    
+   for(var i=0; i < 5; i++)
+   {
+    var calculatedtip= (base*(tip+i*4))/100;
+    toshow += (tip+i*4)+"% is "+calculatedtip.toFixed(1)+"; ";  
+   }
+   document.getElementById("result").innerHTML = toshow;
+   
+} 
+</script>
+
+</body>
+</html> 

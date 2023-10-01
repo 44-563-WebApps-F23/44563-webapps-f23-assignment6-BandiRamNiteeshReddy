@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Author Entry</title> 
+        
+       
     </head>
  
 <body>
@@ -43,6 +45,38 @@ function checkAuthor (){
     }
 
 }
+</script>
+<form>
+
+<div class="container">
+    <img id="image"src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/msid-54559212,width-96,height-65.cms" height="100" width="100" input="image" onclick="selectimage()" value="Click">
+   
+</div>
+
+</form>
+<script>
+    var useImage=1;
+    
+
+    function selectimage(){
+        switch(useImage){
+            case 1:
+              image.src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/msid-54559212,width-96,height-65.cms";
+                useImage++;
+                break;
+              case 2:
+              image.src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/photo-1524492412937-b28074a5d7da.jpeg";
+                useImage++;
+                break;
+                case 3:
+                image.src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_(cropped).jpg";
+                    useImage=1;
+                    break;
+
+        }
+        
+    }
+
 </script>
 
 
