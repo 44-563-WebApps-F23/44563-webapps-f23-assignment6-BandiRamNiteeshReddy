@@ -2,3 +2,8 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 
+Hosted at (https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/settings/pages)
+
+(file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/Authorentry.html)
+(file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/tips.html)
+(file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/cruse.html)
