@@ -2,7 +2,15 @@
 <html>
     <head>
         <title>Author Entry</title> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+          integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
        
     </head>
  
@@ -13,16 +21,17 @@
 
 <form>
     <label for="form1_age">The hidden author name </label>
-    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=Dickens> <br>
+    <input class="form-control" type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=Dickens> <br>
 
     <label for="form1_nick">Guess the author </label>
-    <input type ="text" id="form1_nick" name="form1_nick" autofocus > <br>
+    <input type ="text"class="form-control" id="form1_nick" name="form1_nick" autofocus > <br>
 
-    <input type="button" onclick="checkAuthor()" value="Check the guess">
+    <button type="button" class="btn btn-info" onclick="checkAuthor()" value="Check the guess">Check the guess</button>
 </form>
 
 
-<p id="result">Good-0, Oops-0 </p>
+<p id="result"> Good-0, Oops-0</p>
+<div id="inc"></div>
 
 <script> 
 var good=0;
@@ -36,20 +45,27 @@ function checkAuthor (){
     out = document.getElementById("result")
     if(hidden==guess){
         good++
-        out.innerHTML = "Good-"+good+", "+"Oops-"+oops
+        out.innerHTML = "Good- "+good+", "+"Oops-"+oops;
         confirm("You got it right")
     } else {
         oops++
-        out.innerHTML = "Good-"+good+", "+"Oops-"+oops
-        confirm("Oops")
+        out.innerHTML = "Good-"+good+", "+"Oops-"+oops;
+        confirm("Oops");
+        if (oops==8)
+        {
+            confirm("Sorry, ran out of guesses");
+              
+        }
+        
     }
+    document.getElementById("inc").innerHTML="Guess= "+guess;
 
 }
 </script>
 <form>
 
 <div class="container">
-    <img id="image"src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/msid-54559212,width-96,height-65.cms" height="100" width="100" input="image" onclick="selectimage()" value="Click">
+    <img id="image"src="file:///C:/Users/s565458/Pictures/54559212.cms" height="100" width="100" input="image" onclick="selectimage()" value="Click">
    
 </div>
 
@@ -61,15 +77,15 @@ function checkAuthor (){
     function selectimage(){
         switch(useImage){
             case 1:
-              image.src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/msid-54559212,width-96,height-65.cms";
+              image.src="file:///C:/Users/s565458/Pictures/54559212.cms";
                 useImage++;
                 break;
               case 2:
-              image.src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/photo-1524492412937-b28074a5d7da.jpeg";
+              image.src="file:///C:/Users/s565458/Pictures/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_(cropped).jpg";
                 useImage++;
                 break;
                 case 3:
-                image.src="file:///C:/Users/s565458/Desktop/Webapps_repos/44563-webapps-f23-assignment6-BandiRamNiteeshReddy/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_(cropped).jpg";
+                image.src="file:///C:/Users/s565458/Pictures/TM.jpeg";
                     useImage=1;
                     break;
 
